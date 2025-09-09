@@ -1,7 +1,7 @@
 /* add the webmap to the portal */
 require(["esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer"], (Map, MapView, FeatureLayer) => {
   const map = new Map({
-    basemap: "hybrid"
+    basemap: "topo"
   });
 
 
@@ -16,7 +16,7 @@ require(["esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer"], (Map, Ma
     zoom: 10 /* Zoom level */
   });
 
- const featureLayer_2 = new FeatureLayer({url: "https://services2.arcgis.com/bB9Y1bGKerz1PTl5/arcgis/rest/services/STL_Basketball_Courts/FeatureServer"});
+ const featureLayer_2 = new FeatureLayer({url: "https://services7.arcgis.com/ZodPOMBKsdAsTqF4/arcgis/rest/services/St_Louis_City_Neighborhoods/FeatureServer"});
                                  
                                   const featureLayer_1 = new FeatureLayer({url: "https://services1.arcgis.com/g2TonOxuRkIqSOFx/arcgis/rest/services/st_louis_mo_boundary/FeatureServer"});      
                                               map.addMany([featureLayer_1, featureLayer_2]);
